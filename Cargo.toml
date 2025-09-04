@@ -1,0 +1,19 @@
+[package]
+name = "rt"
+version = "0.1.0"
+edition = "2021"
+description = "A modern, fast, and enterprise-grade terminal emulator built with Rust"
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/yourusername/rt"
+homepage = "https://rt-terminal.dev"
+keywords = ["terminal", "emulator", "rust", "gpu", "performance"]
+categories = ["command-line-utilities", "gui"]
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+wgpu = "0.19"
+winit = "0.29"
+fontdue = "0.9"
+image = "0.24"
+rand = "0.8"
