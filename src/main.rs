@@ -23,7 +23,7 @@ fn main() -> Result<()> {
         .build(&event_loop)?;
 
     let mut renderer = pollster::block_on(Renderer::new(&window))?;
-    let mut terminal = Terminal::new();
+    let mut terminal = Terminal::with_sample_data();
     
     let mut last_frame_time = Instant::now();
     let target_fps = 60.0;
