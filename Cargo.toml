@@ -17,3 +17,25 @@ winit = "0.29"
 fontdue = "0.9"
 image = "0.24"
 rand = "0.8"
+# Terminal emulation dependencies
+nix = { version = "0.27", features = ["process", "signal"] }
+libc = "0.2"
+mio = "0.8"
+bytes = "1.0"
+unicode-width = "0.1"
+vte = "0.13"
+# Cross-platform PTY support
+portable-pty = "0.8"
+# Async utilities
+futures = "0.3"
+# Logging
+log = "0.4"
+env_logger = "0.10"
+# System directories
+dirs = "5.0"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["wincon", "processthreadsapi", "handleapi", "winnt"] }
+
+[dev-dependencies]
+tempfile = "3.0"
